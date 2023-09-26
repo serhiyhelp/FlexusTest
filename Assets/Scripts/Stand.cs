@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class Stand : MonoBehaviour
 {
-    [SerializeField] private MeshRenderer _renderer;
-    [SerializeField] private Texture2D    _hole;
+    [SerializeField] private MeshRenderer  _renderer;
+    [SerializeField] private Texture2D     _hole;
+    [SerializeField] private RenderTexture _rt;
 
     [Space]
     [SerializeField] private int _resolution = 1024;
@@ -13,35 +14,25 @@ public class Stand : MonoBehaviour
 
     private void Awake()
     {
-        _texture = new Texture2D(_resolution, _resolution);
-        _texture.SetPixels(Enumerable.Repeat(Color.white, _resolution * _resolution).ToArray());
-        _texture.Apply();
-        
-        _renderer.material.mainTexture = _texture;
+        RenderTexture.active = _rt;
+        GL.Clear(false, true, Color.white);
+        RenderTexture.active = null;
     }
+
 
     public void DrawHit(RaycastHit hit)
     {
+        RenderTexture.active = _rt;
+        GL.PushMatrix();
+        GL.LoadPixelMatrix(0, _resolution, _resolution, 0);
+
         var uv = hit.textureCoord2;
+        uv.y = 1 - uv.y;
         var x  = (int)(uv.x * _resolution) - _hole.width / 2;
         var y  = (int)(uv.y * _resolution) - _hole.height / 2;
 
-        for (var i = 0; i < _hole.width; i++)
-        for (var j = 0; j < _hole.height; j++)
-        {
-            var localX = x + i;
-            var localY = y + j;
-
-            if (localX >= 0 && localY >= 0 && localX < _resolution && localY < _resolution)
-            {
-                var pixel = _hole.GetPixel(i, j);
-                if (pixel.r < 0.5f) // draw only black pixels
-                {
-                    _texture.SetPixel(localX, localY, pixel);
-                }
-            }
-        }
-
-        _texture.Apply();
+        Graphics.DrawTexture(new Rect(x, y, _hole.width, _hole.height), _hole);
+        GL.PopMatrix();
+        RenderTexture.active = null;
     }
 }

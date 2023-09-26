@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 20.599976, y: 50}
+  m_AnchoredPosition: {x: 20.600098, y: 50}
   m_SizeDelta: {x: 20, y: 160}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &43058759
@@ -276,7 +276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 47.18982, y: 105}
+  m_AnchoredPosition: {x: 47.18994, y: 105}
   m_SizeDelta: {x: 183.2102, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &492503991
@@ -529,6 +529,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1251872238891988931, guid: 9942b2ac867fa314e92d51c3c4b9093d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f20200288baf35e4ea8e6936e029d668, type: 2}
     - target: {fileID: 1251872238891988933, guid: 9942b2ac867fa314e92d51c3c4b9093d, type: 3}
       propertyPath: m_Name
       value: Stand (1)
@@ -537,6 +541,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2479360339752681729, guid: 9942b2ac867fa314e92d51c3c4b9093d, type: 3}
+      propertyPath: _rt
+      value: 
+      objectReference: {fileID: 8400000, guid: 07e876f3b3b6bfa41862235ffd099b38, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9942b2ac867fa314e92d51c3c4b9093d, type: 3}
 --- !u!1 &639680360
@@ -1398,6 +1406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stand
       objectReference: {fileID: 0}
+    - target: {fileID: 2479360339752681729, guid: 9942b2ac867fa314e92d51c3c4b9093d, type: 3}
+      propertyPath: _rt
+      value: 
+      objectReference: {fileID: 8400000, guid: d24633cc25ff58d408cb2277026b8ebb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9942b2ac867fa314e92d51c3c4b9093d, type: 3}
 --- !u!1001 &1624907558189517326

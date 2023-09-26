@@ -1,20 +1,16 @@
-using System.Linq;
 using UnityEngine;
 
 public class Stand : MonoBehaviour
 {
-    [SerializeField] private MeshRenderer  _renderer;
     [SerializeField] private Texture2D     _hole;
-    [SerializeField] private RenderTexture _rt;
+    [SerializeField] private RenderTexture _renderTexture;
 
     [Space]
     [SerializeField] private int _resolution = 1024;
 
-    private Texture2D _texture;
-
     private void Awake()
     {
-        RenderTexture.active = _rt;
+        RenderTexture.active = _renderTexture;
         GL.Clear(false, true, Color.white);
         RenderTexture.active = null;
     }
@@ -22,7 +18,7 @@ public class Stand : MonoBehaviour
 
     public void DrawHit(RaycastHit hit)
     {
-        RenderTexture.active = _rt;
+        RenderTexture.active = _renderTexture;
         GL.PushMatrix();
         GL.LoadPixelMatrix(0, _resolution, _resolution, 0);
 

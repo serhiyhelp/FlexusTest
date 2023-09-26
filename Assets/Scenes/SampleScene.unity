@@ -545,6 +545,10 @@ PrefabInstance:
       propertyPath: _rt
       value: 
       objectReference: {fileID: 8400000, guid: 07e876f3b3b6bfa41862235ffd099b38, type: 2}
+    - target: {fileID: 2479360339752681729, guid: 9942b2ac867fa314e92d51c3c4b9093d, type: 3}
+      propertyPath: _renderTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 07e876f3b3b6bfa41862235ffd099b38, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9942b2ac867fa314e92d51c3c4b9093d, type: 3}
 --- !u!1 &639680360
@@ -1408,6 +1412,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2479360339752681729, guid: 9942b2ac867fa314e92d51c3c4b9093d, type: 3}
       propertyPath: _rt
+      value: 
+      objectReference: {fileID: 8400000, guid: d24633cc25ff58d408cb2277026b8ebb, type: 2}
+    - target: {fileID: 2479360339752681729, guid: 9942b2ac867fa314e92d51c3c4b9093d, type: 3}
+      propertyPath: _renderTexture
       value: 
       objectReference: {fileID: 8400000, guid: d24633cc25ff58d408cb2277026b8ebb, type: 2}
     m_RemovedComponents: []
